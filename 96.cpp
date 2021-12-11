@@ -20,7 +20,9 @@ void countSort(int arr[],int n){
         count[arr[i]]++;
     }
 
-    for (int i = 0; i <= k; i++)
+
+
+    for (int i = 1; i <= k; i++)
     {
         count[i]+=count[i-1];
     }
@@ -28,7 +30,7 @@ void countSort(int arr[],int n){
 
     for (int i = n-1; i >=0; i--)
     {
-        output[--count[arr[i]]];
+        output[--count[arr[i]]]=arr[i];
     }
 
     for (int i = 0; i < n; i++)
